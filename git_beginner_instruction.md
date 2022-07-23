@@ -42,12 +42,14 @@ Typical Git commands:
 - git config --global user.name «Ваше имя английскими буквами»
 - git config --global user.email ваша почта@example.com
 
-git status
-git add
-git add .
-git commit -m "<message>"
-git commit -am "<message>"
-git log
-git checkout [<branch>]
-git diff 
+|Command| Desciption|
+|-----------|-----------|
+|git status| Checks the status
+|git add <file_name>| Stages a file for next commit
+|git add .| 
+|git commit -m "<>"|
+|git commit -am "<comment>"|
+|git log|
+|git checkout [<branch>]|
+|git diff| 
 
