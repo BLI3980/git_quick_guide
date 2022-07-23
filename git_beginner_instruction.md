@@ -18,10 +18,15 @@ Download and install the latest version of Git use the following link:
 **Note:** It is recommended to install Git first, followed by VSC. 
 <p> </p>
 
+
 # Start
 Once Git and VSC are installed, create a folder on your PC or remote location where your project will reside and where your repository will be.
 
-**Note:** Repository is not exactly the same thing as a folder with project files. Repository is a place where Git performs tracking of all changes and controls them.While it is in the same place as the project folder, it is not created automatically when you create the folder. You need to initiate it.
+**Note:** Repository is not exactly the same thing as a folder with project files. Repository is a place where Git performs tracking of all changes in the project and controls them. While it is in the same place as the project folder, it is not created automatically when you create the folder. You need to initiate it using a command.
+
+ - git init - a command that creates a Git repository
+
+Once repository is created, you can start creating files in it and work on them.
 
 <p> </p>
 <p> </p>
@@ -31,13 +36,18 @@ Once Git and VSC are installed, create a folder on your PC or remote location wh
 <p> </p>
 <p> </p>
 <p> </p>
-Create/open repository
 
 
-Initialize Git in repository
+Typical Git commands:
+- git config --global user.name «Ваше имя английскими буквами»
+- git config --global user.email ваша почта@example.com
 
- - git init
+git status
+git add
+git add .
+git commit -m "<message>"
+git commit -am "<message>"
+git log
+git checkout [<branch>]
+git diff 
 
-Create new file and start to work
-
-Typical Git commands
