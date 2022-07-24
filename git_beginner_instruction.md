@@ -2,7 +2,11 @@ This is ia quick user guide for beginners to work with Git.
 <p> </p>
 
 # About
-Git is one of the most popular solutions in market for managing the versions of files in complex projects, whether managed by one person or multiple team members.
+Git is one of the most popular solutions in market for managing the versions of files in complex projects, whether managed by one person or multiple team members. 
+
+A couple of examples. 
+
+1. You created a website and it works fine. However, you decide to add some new features to this site
 
 # Download and install
 
