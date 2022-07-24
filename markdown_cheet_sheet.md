@@ -10,9 +10,13 @@
 
 ---
 
-[title](https://www.example.com)
 
-![My photo](C:\git_lesson1\my_photo.jpg)
+---
+![My photo](.\my_photo.jpg)
+<img src="my_photo.jpg" width="200" height="200">
+---
+
+
 
 | Syntax | Description |
 | ----------- | ----------- |
