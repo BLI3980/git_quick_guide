@@ -31,6 +31,8 @@ Once Git and VSC are installed, create a folder on your PC or remote location wh
 
 >Avoid using cyrilic letter in a path name to your folder
 
+## Initialize
+
 **Note:** Repository is not exactly the same thing as a folder with project files. Repository is a place where Git performs tracking of all changes in the project and controls them. While it is in the same place as the project folder, it is not created automatically when you create the folder. You need to initiate it using a command.
 
  - git init - a command that creates a Git repository
@@ -44,14 +46,43 @@ Commands that and information that you will need to provide is as follows:
 
 <p> </p>
 
+## Create files and start working on project
+- step instruction to create new file
+
+## Checking status or work
+- Untracked, new file, modified - statuses of files that are due for commit
+- Changes not staged for commit - status of changes that are not ready yet for commit
+- Changes to be commited - status of changes that are ready for commit, have been staged
+- git status - shows which branch you are on and whether there are any changes to project that are due for saving/commit
+- git log - shows the list of commits created (if any) previously
+- git log --graph - same function as above but with graphical representation of branches
+>Note: If a list of information to display after entering the command **git log** is extensive terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
+>>Beware of keyboard language layout. If it is not **English**, pressing **q** won't work.
+
+
+## Save changes to project
+- describe general rule for saving - ctrl+s (white dot), add, commit
+- git add 
+- git add .
+- git commit -m "message"
+- git commit -am "message"
+## Create or delete branch. Move between branches
+## Merge branches
+
 |Command| Desciption|
-|-----------|-----------|
+|----------|-----------|
 |git status| Checks the status
-|git add <file_name>| Stages a file for next commit
+|git add < file_name >| Stages a file for next commit
 |git add .| 
-|git commit -m "<>"|
-|git commit -am "<comment>"|
+|git commit -m "< comment >"|
+|git commit -am "< comment >"|
 |git log|
-|git checkout [<branch>]|
-|git diff| 
+|git diff ##|
+|git diff < commit "a" hash > < commit "b" hash >|
+|clear|
+|git branch|
+|git branch < branch name >|
+|git branch -d < branch name >| **small d**
+|git checkout < branch or commit hash >|
+|git merge < branch name >| merge to be done from branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type merge
 
