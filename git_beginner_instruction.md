@@ -5,12 +5,7 @@
 
 Git is one of the most popular solutions in market for managing the versions of files in complex projects, whether performed by one person or multiple team members. 
 
-A few examples where the control of versions is needed: 
 
-1. You created a website and it works just fine. However, you decide to add some new features to this site. If new feature corrupts the current version of website, you have problems. But if you saved your current version prior to adding new feature and if you can go back to saved version, then you are ok.
-2. You completed a work on a big document and you are happy with it. At the last moment you made some changes to the document that you don't like. If you have means to go back to your saved version of document, you don't have to re-write the entire document.
-3. There is a shared document in a project to which several members of the project can have simultaneous editing access. To avoid situation where a work of one member uncontrollably supersedes a work of the others, all versions of the document need to be controlled.
-<p> </p>
 
 # Download and install
 
@@ -124,7 +119,20 @@ Branch is a feature which allows you to work on different areas of project indep
 ![Branches](branches.jpg)
 
 Here are the commmands that can be used for branches:
+|Command| Desciption|
+|----------|-----------|
+|git branch| - Displays the list of currently existing branches. And also highlights the branch in which you currently reside with green color and a star symbol
+|git branch < branch name >| - Create new branch with < branch name >
+|git branch -d < branch name >| - Delete an existing branch. Use small -d perferably. This way deleting will be performed only if all work in the branch is already merged with another branch
+|git checkout < branch or commit hash >| - Move to the specified branch
+|git checkout -b < branch name >| - Create new branch and move to it, in one command
+
+
 ## Merge branches
+|Command| Desciption|
+|----------|-----------|
+|git merge < branch name >| - Merge a branch in which you currently reside with a branch you specify. I.e. merge to be done from a branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type "git merge branch b"
+
 
 Full list of commands to cover in this document:
 
