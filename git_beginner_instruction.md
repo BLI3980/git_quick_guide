@@ -1,7 +1,8 @@
->**This is ia quick user guide for beginners to basics of Git.**
+>**This is ia quick user guide for beginners to basics of Git. It is a live document and it being updated regularly**
 <p> </p>
 
-# About
+# About Git
+
 Git is one of the most popular solutions in market for managing the versions of files in complex projects, whether performed by one person or multiple team members. 
 
 A few examples where the control of versions is needed: 
@@ -22,19 +23,24 @@ Download and install the latest version of Git use the following link:
 > [Download Visual Studio Code](https://code.visualstudio.com/download)
 <p> </p>
 
-**Note:** It is recommended to install Git first, followed by VSC. 
+>**Note:** It is recommended to install Git first, followed by VSC. 
 <p> </p>
 
 
 # Start
-Once Git and VSC are installed, create a folder on your PC or remote location where your project will reside and where your repository will be. After that open that folder via VSC by clicking the second icon in Explorer, as depicted in below image, or click *File/Open Folder..*
 
-![Open Folder](create_new_file.jpg)
->Avoid using cyrilic letter in a path name to your folder
+## Create and open project folder
+
+Once Git and VSC are installed, create a folder on your PC or remote location where your project will reside and where your repository will be. After that open the folder that you have created via VSC by clicking the second icon in Explorer, as depicted in below image, or click *File/Open Folder...* in *Menu* tab of the program.
+
+![Open Folder](create_new_file_and_folder.jpg) 
+
+>**Note:** Avoid using cyrilic letter in a path name to your folder
+<p> </p>
 
 ## Initialize
 
-**Note:** Repository is not exactly the same thing as a folder with project files. Repository is a place where Git performs tracking of all changes in the project and controls them. While it is in the same place as the project folder, it is not created automatically when you create the folder. You need to initiate it using a command.
+>**Note:** Repository is not exactly the same thing as a folder with project files. Repository is a place where Git performs tracking of all changes in the project and controls them. While it is in the same place as the project folder, it is not created automatically when you create the folder. You need to initiate it using a command.
 
  - *git init* - a command that creates a Git repository
 
@@ -47,15 +53,27 @@ Commands that and information that you will need to provide is as follows:
 
 <p> </p>
 
+# Begin to work
+
 ## Create files and start working on project
-To create a new file in repository just the first icon in 
+
+To create a new file in repository just click on the first icon in Explorer or click *File/New File..." in *Menu* tab of the program.
+<p> </p>
 
 ## Checking status or work
+
+*git status* is one of most commonly used commands for working with Git. As name of the command suggests, it allows to see if there is anything that needs your attention.
+Use this command before and after any changes you make to Git (add, commit, checkou, etc).
+When typed *git status* command pay attention to the following information that might be displayed in Terminal:
+
 |Status of work| Desciption|
 |----------|-----------|
 |*Untracked, new file, modified*| - statuses of files that are due for commit
 |*Changes not staged for commit*| - status of changes that are not ready yet for commit
 |*Changes to be commited*| - status of changes that are ready for commit, have been staged
+<p> </p>
+
+The list of most common commands for checking the status of work, the history of commits, etc. are as follows:
 
 |Command| Desciption|
 |-------------|-----------|
@@ -63,9 +81,14 @@ To create a new file in repository just the first icon in
 |*git log*| - shows the list of commits created (if any) previously
 |*git log* --graph| - same function as above but with graphical representation of branches
 |*git diff ##*| - checking the differences between the last two commits
+|git diff < commit "a" hash > < commit "b" hash >| - checking the differences between selected two commits
 
->Note: If a list of information to display after entering the command **git log** is extensive, terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
+>Note: If a list of information to display in Terminal after entering the command **git log** is extensive, Terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
 >>Beware of keyboard language layout. If it is not **English**, pressing **q** won't work.
+
+![cursor](cursor.jpg) - cursor 
+
+![END](end.jpg) - end
 <p> </p>
    
 ## Branches - create, delete, merge, move between
