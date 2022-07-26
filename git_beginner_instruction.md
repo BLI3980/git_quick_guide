@@ -28,7 +28,7 @@ Download and install the latest version of Git use the following link:
 <p> </p>
 
 
-# Start
+# Set up
 
 ## Create and open project folder
 
@@ -107,7 +107,7 @@ The general rule for saving changes to your project to Git are as follows:
    |*git add < file name >*| - Add a file which you want to stage, so that all changes made to this file are ready to be written into next commit. To speed up typing this command, after you typed a few letters of the file, press Tab and Git will automatically finish file name. Check is Git suggestion was correct, otherwise correct as you need.
    |*git add .*| - Add all files in repository to stage. Do this if you do not have any exclusions, i.e. want to stage all files in repository
 
-   Add and Commit commands can be combined into one for some occasions. This will be explained futher down below in this help file.
+   Add and Commit commands can be combined into one command for some occasions. This will be explained futher down below in this help file.
 
 3. Perform commit, i.e. save changes which you want to save into Git. This can be done with the following commands:
 
