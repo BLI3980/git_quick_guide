@@ -113,12 +113,16 @@ Full list of commands to cover in this document:
 |git commit -m "< comment >"|
 |git commit -am "< comment >"|
 |git log|
+|git log --graph|
+|git reglog|
 |git diff ##|
 |git diff < commit "a" hash > < commit "b" hash >|
+|git checkout < commit hash >
 |clear|
 |git branch|
 |git branch < branch name >|
 |git branch -d < branch name >| **small d**
 |git checkout < branch or commit hash >|
+|git checkout -b < branch name >
 |git merge < branch name >| merge to be done from branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type merge
 
