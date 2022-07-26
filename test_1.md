@@ -18,4 +18,4 @@ row 1
 
 row 2
 
-row 3 made conflict another attempt
+row 3 made conflict change here
