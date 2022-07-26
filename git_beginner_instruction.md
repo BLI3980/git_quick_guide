@@ -50,22 +50,33 @@ Commands that and information that you will need to provide is as follows:
 - step instruction to create new file
 
 ## Checking status or work
-- Untracked, new file, modified - statuses of files that are due for commit
-- Changes not staged for commit - status of changes that are not ready yet for commit
-- Changes to be commited - status of changes that are ready for commit, have been staged
-- git status - shows which branch you are on and whether there are any changes to project that are due for saving/commit
-- git log - shows the list of commits created (if any) previously
-- git log --graph - same function as above but with graphical representation of branches
+- *Untracked, new file, modified* - statuses of files that are due for commit
+- *Changes not staged for commit* - status of changes that are not ready yet for commit
+- *Changes to be commited* - status of changes that are ready for commit, have been staged
+- *git status* - shows which branch you are on and whether there are any changes to project that are due for saving/commit
+- *git log* - shows the list of commits created (if any) previously
+- *git log* --graph - same function as above but with graphical representation of branches
 >Note: If a list of information to display after entering the command **git log** is extensive terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
 >>Beware of keyboard language layout. If it is not **English**, pressing **q** won't work.
 
 
 ## Save changes to project
-- describe general rule for saving - ctrl+s (white dot), add, commit
-- git add 
-- git add .
-- git commit -m "message"
-- git commit -am "message"
+The general rule for saving changes to your project to Git are as follows:
+1. After you have made some changes to the files in your project and you are happy with what you have done, save the files same way as how you would usually do. I.e. press hotkey Ctrl+s on your keyboard or go to File/Save.
+   >Note: if you don't save your files, the changes will not be saved into next commit. If you don't rememeber if you saved files, look through all opened tabs - any unsaved file tabs will have white dot on the right.
+
+2. Stage files for the next commit. I.e. add them to the queque for saving in Git. To do that you need to use Add commands. There are several versions of such commands. They are listed below. Failng to do this step also will not save the changes to the next commit.
+
+- *git add < file name >* - Add a file which you want to stage, so that all changes made to this file are ready to be written into next commit. To speed up typing this command, after you typed a few letters of the file, press Tab and Git will automatically finish file name. Check is Git suggestion was correct, otherwise correct as you need.
+- *git add .* - Add all files in repository to stage. Do this if you do not have any exclusions, i.e. want to stage all files in repository
+Add and Commit commands can be combined into one for some occasions. This will be explained futher down below in this help file.
+
+3. Perform commit, i.e. save changes which you want to save into Git. This can be done with the following commands:
+
+- *git commit -m "< message >"* - Commit the staged files into Git. Type the message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
+- *git commit -am "< message >"* - This command combines Add and Commit commands into one. 
+   >While this commmand saves you time in most of occasions, note that it will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
+   
 ## Create or delete branch. Move between branches
 ## Merge branches
 
