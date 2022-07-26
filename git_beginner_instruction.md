@@ -4,24 +4,22 @@
 # About Git
 
 Git is one of the most popular solutions in market for managing the versions of files in complex projects, whether performed by one person or multiple team members. 
-
-
+<p> </p>
 
 # Download and install
 
-Download and install the latest version of Git use the following link: 
+Download and install the latest version of Git using the following link: 
 > [Download Git](https://git-scm.com/downloads)
 <p> </p>
 
-While it is possible to manage a project through Git interface itself, it is not convenient, that's why there are many other applications that are used as console/terminal for Git. Visual Studio Code is one of the most popular ones.
+While it is possible to manage a project through Git interface itself, it is not convenient, that is why there are many other applications that are used as console/terminal for Git. Visual Studio Code is one of the most popular ones.
 
-Download and install the latest version of Git use the following link: 
+Download and install the latest version of Visual Studio Code using the following link: 
 > [Download Visual Studio Code](https://code.visualstudio.com/download)
 <p> </p>
 
 >**Note:** It is recommended to install Git first, followed by VSC. 
 <p> </p>
-
 
 # Set up
 
@@ -31,7 +29,7 @@ Once Git and VSC are installed, create a folder on your PC or remote location wh
 
 ![Open Folder](create_new_file_and_folder.jpg) 
 
->**Note:** Avoid using cyrilic letter in a path name to your folder
+>**Note:** Avoid using cyrilic letters in the path name to your folder
 <p> </p>
 
 ## Initialize
@@ -53,14 +51,14 @@ Commands that and information that you will need to provide is as follows:
 
 ## Create files and start working on project
 
-To create a new file in repository just click on the first icon in Explorer or click *File/New File..." in *Menu* tab of the program.
+To create a new file in repository just click on the first icon in Explorer or click *File/New File...* in *Menu* tab of the program.
 <p> </p>
 
 ## Checking status or work
 
 *git status* is one of most commonly used commands for working with Git. As name of the command suggests, it allows to see if there is anything that needs your attention.
-Use this command before and after any changes you make to Git (add, commit, checkou, etc).
-When typed *git status* command pay attention to the following information that might be displayed in Terminal:
+Use this command before and after any changes you make to Git (add, commit, checkout, etc).
+When type *git status* command pay attention to the following information that might be displayed in Terminal:
 
 |Status of work| Desciption|
 |----------|-----------|
@@ -76,6 +74,7 @@ The list of most common commands for checking the status of work, the history of
 |*git status*| - shows which branch you are on and whether there are any changes to project that are due for saving/commit
 |*git log*| - shows the list of commits created (if any) previously
 |*git log* --graph| - same function as above but with graphical representation of branches
+|*git reflog*| - shows the list of all changes and movements in repository
 |*git diff ##*| - checking the differences between the last two commits
 |git diff < commit "a" hash > < commit "b" hash >| - checking the differences between selected two commits
 
@@ -89,28 +88,36 @@ The list of most common commands for checking the status of work, the history of
 
 ## Save changes to project
 
-The general rule for saving changes to your project to Git are as follows:
-1. After you have made some changes to the files in your project and you are happy with what you have done, save the files same way as how you would usually do. I.e. press hotkey Ctrl+s on your keyboard or go to File/Save.
-   >Note: if you don't save your files, the changes will not be saved into next commit. If you don't rememeber if you saved files, look through all opened tabs - any unsaved file tabs will have white dot on the right, like this:
+The general rule for saving changes to your project to Git repository are as follows:
+1. After you have made some changes to the files in your project and you are happy with what you have done, save the files same way as how you would usually do. I.e. press hotkey *Ctrl+s* on your keyboard or go to *File/Save*.
+   >Note: if you don't save your files, the changes will not be saved into next commit. If you don't rememeber whether you saved files, look through all opened tabs - any unsaved file tabs will have white dot on the right, like this:
 
    ![white dot](white_dot.jpg)
 
-2. Stage files for the next commit. I.e. add them to the queque for saving into Git. To do that you need to use Add commands. There are several versions of such commands. They are listed below. Failng to do this step also will not save the changes to the next commit.
+2. Stage files for the next commit. I.e. add them to the queque for saving into Git repository. To do that you need to use Add commands. There are several versions of such commands. They are listed below. Failng to do this step also will not save the changes to the next commit.
 
    |Command| Desciption|
    |----------|-----------|
-   |*git add < file name >*| - Add a file which you want to stage, so that all changes made to this file are ready to be written into next commit. To speed up typing this command, after you typed a few letters of the file, press Tab and Git will automatically finish file name. Check is Git suggestion was correct, otherwise correct as you need.
-   |*git add .*| - Add all files in repository to stage. Do this if you do not have any exclusions, i.e. want to stage all files in repository
+   |*git add < file name >*| - Add a file which you want to stage, so that all changes made to this file are ready to be written into next commit. To speed up typing this command, after you typed a few letters of the file name, press Tab and Git will autocomplete the file name. Check if Git suggestion was correct, otherwise correct as you need manually.
+   |*git add .*| - Add all files in the branch to stage. Do this if you do not have any exclusions, i.e. want to stage all files in the branch.
 
    Add and Commit commands can be combined into one command for some occasions. This will be explained futher down below in this help file.
 
-3. Perform commit, i.e. save changes which you want to save into Git. This can be done with the following commands:
+3. Perform commit, i.e. save changes which you want to save into Git repository. This can be done with the following commands:
 
    |Command| Desciption|
    |----------|-----------|
-   |*git commit -m "< message >"*| - Commit the staged files into Git. Type the message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
+   |*git commit -m "< message >"*| - Commit the staged files into Git repository. Type your message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
    |*git commit -am "< message >"*| - This command combines Add and Commit commands into one. 
    >*Note:* While the second type of commit command saves you time in most of occasions, note that it will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
+<p> </p>
+
+There might be occastions when you will want to move to one of your previous commits and from there to come back to the latest commit. To do that you need to type the following command:
+
+   |Command| Desciption|
+   |----------|-----------|
+   |*git checkout "< commit hash >"*| - Move to another commit. Specifying the first 4-6 symbols of commit is generally sufficient, no need to type fill number
+   |*git checkout master*| - Go back to the most recent commit
 <p> </p>
 
 ## Branches - create, delete, merge, move between
@@ -132,29 +139,3 @@ Here are the commmands that can be used for branches:
 |Command| Desciption|
 |----------|-----------|
 |git merge < branch name >| - Merge a branch in which you currently reside with a branch you specify. I.e. merge to be done from a branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type "git merge branch b"
-
-
-Full list of commands to cover in this document:
-
-|Command| Desciption|
-|----------|-----------|
-|example|example|
-|git status| Checks the status
-|git add < file_name >| Stages a file for next commit
-|git add .| 
-|git commit -m "< comment >"|
-|git commit -am "< comment >"|
-|git log|
-|git log --graph|
-|git reglog|
-|git diff ##|
-|git diff < commit "a" hash > < commit "b" hash >|
-|git checkout < commit hash >
-|clear|
-|git branch|
-|git branch < branch name >|
-|git branch -d < branch name >| **small d**
-|git checkout < branch or commit hash >|
-|git checkout -b < branch name >
-|git merge < branch name >| merge to be done from branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type merge
-
