@@ -18,4 +18,4 @@ row 1
 
 row 2
 
-row 3 made conflict intentionally.third attempt to make conflict
+row 3 made conflict another attempt
