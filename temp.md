@@ -93,3 +93,4 @@ Here are the commmands that can be used for branches:
 |git checkout < branch or commit hash >|
 |git merge < branch name >| merge to be done from branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type merge
 
+dfdfdfd
