@@ -67,7 +67,7 @@ The general rule for saving changes to your project to Git are as follows:
 
 2. Stage files for the next commit. I.e. add them to the queque for saving in Git. To do that you need to use Add commands. There are several versions of such commands. They are listed below. Failng to do this step also will not save the changes to the next commit.
 
-- *git add < file name >* - Add a file which you want to stage, so that all changes made to this file are ready to be written into next commit. To speed up typing this command, after you typed a few letters of the file, press Tab and Git will automatically finish file name. Check is Git suggestion was correct, otherwise correct as you need.
+- *git add < file name >* - Add a file which you want to stage, so that all changes made to this file are ready to be written into next commit. It is like to say to Git that you have changes that you want to save into Git. To speed up typing this command, after you typed a few letters of the file, press Tab and Git will automatically finish file name. Check is Git suggestion was correct, otherwise correct as you need.
 - *git add .* - Add all files in repository to stage. Do this if you do not have any exclusions, i.e. want to stage all files in repository
 Add and Commit commands can be combined into one for some occasions. This will be explained futher down below in this help file.
 
@@ -76,7 +76,7 @@ Add and Commit commands can be combined into one for some occasions. This will b
 - *git commit -m "< message >"* - Commit the staged files into Git. Type the message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
 - *git commit -am "< message >"* - This command combines Add and Commit commands into one. 
    >While this commmand saves you time in most of occasions, note that it will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
-   
+
 ## Create or delete branch. Move between branches
 ## Merge branches
 
