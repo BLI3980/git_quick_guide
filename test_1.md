@@ -4,7 +4,7 @@
 
 1. abrakadabra
 
-dfdfdfdfdf
+dfdfdfdfdf dkfnfdkd;fa;aff
 
 some changes
 
@@ -18,4 +18,4 @@ row 1
 
 row 2
 
-row 3
+row 3 made conflict intentionally
