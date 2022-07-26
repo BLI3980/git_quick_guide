@@ -84,7 +84,7 @@ The list of most common commands for checking the status of work, the history of
 |*git diff ##*| - checking the differences between the last two commits
 |git diff < commit "a" hash > < commit "b" hash >| - checking the differences between selected two commits
 
->Note: If a list of information to display in Terminal after entering the command **git log** is extensive, Terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
+>**Note:** If a list of information to display in Terminal after entering the command **git log** is extensive, Terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
 >>Beware of keyboard language layout. If it is not **English**, pressing **q** won't work.
 
 ![cursor](cursor.jpg) - cursor 
