@@ -107,6 +107,7 @@ Full list of commands to cover in this document:
 
 |Command| Desciption|
 |----------|-----------|
+|example|example|
 |git status| Checks the status
 |git add < file_name >| Stages a file for next commit
 |git add .| 
