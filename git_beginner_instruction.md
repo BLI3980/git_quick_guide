@@ -99,6 +99,8 @@ Branch is a feature which allows you to work on different areas of project indep
 Here are the commmands that can be used for branches:
 ## Merge branches
 
+Full list of commands to cover in this document:
+
 |Command| Desciption|
 |----------|-----------|
 |git status| Checks the status
