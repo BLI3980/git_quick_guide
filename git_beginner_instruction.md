@@ -128,17 +128,17 @@ Branch is a feature which allows you to work on different areas of project indep
 Here are the commmands that can be used for branches:
 |Command| Desciption|
 |----------|-----------|
-|git branch| - Displays the list of currently existing branches. And also highlights the branch in which you currently reside with green color and a star symbol
-|git branch < branch name >| - Create new branch with < branch name >
-|git branch -d < branch name >| - Delete an existing branch. Use small -d perferably. This way deleting will be performed only if all work in the branch is already merged with another branch
-|git checkout < branch or commit hash >| - Move to the specified branch
-|git checkout -b < branch name >| - Create new branch and move to it, in one command
+|*git branch*| - Displays the list of currently existing branches. And also highlights the branch in which you currently reside with green color and a star symbol
+|*git branch < branch name >*| - Create new branch with < branch name >
+|*git branch -d < branch name >*| - Delete an existing branch. Use small -d perferably. This way deleting will be performed only if all work in the branch is already merged with another branch
+|*git checkout < branch or commit hash >*| - Move to the specified branch
+|*git checkout -b < branch name >*| - Create new branch and move to it, in one command
 
 
 ## Merge branches
 |Command| Desciption|
 |----------|-----------|
-|git merge < branch name >| - Merge a branch in which you currently reside with a branch you specify. I.e. merge to be done from a branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type "git merge branch b"
+|*git merge < branch name >*| - Merge a branch in which you currently reside with a branch you specify. I.e. merge to be done from a branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type "git merge branch b"
 >**Note:** After branch "a" is merged with data from branch "b", branch "a" contains data of "a" and "b" (unless manually edited during conflict resolution), but branch "b" does not disappear. It still exists after merging in the same state as it was before merging. If branch "b" is not needed after merge, it needs to be deleted manually using command "git branch -d < branch name >*.
 
 ### Merge conflicts
@@ -148,3 +148,41 @@ If information was modified in the same files in both branches, Git will try to 
 You can either accept the changes in your current branch or accept the changes in incoming branch or accepth both changes.
 
 Once the conflict is resolved either perform command *git merge --continue* or command *git commit -am < message >*. 
+<p> </p>
+
+# Working with remove repositories
+
+## Steps for *push* and *pull* commands to send and receive repositories from remote location:
+
+1. Create account on GitHub
+
+2. Create local repository
+
+3. Authorize local repository on GitHub. Git will ask to login on GitHub.
+
+4. Send (*push*) your local repository to remote (GitHub). You might need to authorize on remote repository, depending on whether you did that before or not.
+
+5. Make changes from "other computer"
+
+6. Download (*pull*) the most recent verion of repository from remote location to your local location
+<p> </p>
+
+## Steps of how to perform changes on open-source projects published on Github:
+
+1. Do a fork of a repository of a project that we are interested in. By doing this we create a copy of the project on our own account in Github.
+
+2. Do *git clone* for the project to create a copy of it on our local repository.
+
+3. Create new branch in our local repository and make changes for the project that we suggest in this branch.
+
+4. Perform all changes only in this new branch. Do not touch main/master branch of the project.
+
+5. Once finished send changed project (*push*) to our Github account.
+
+6. On Github a button should appear suggesting to Compare & Pull Request our changes to the Author of the project. The Author will review and decide if he want to accept the changes, then merge to his project if he accepts.
+
+|Command| Desciption|
+|----------|-----------|
+|*git clone < url addres >*| - copies remote repository to your local location. **Note**, this command not only loads repository to your local location, but also tries to merge remote repository with yours.
+|*git pull*| - loads all from current remote repository to local repository and merge changes
+|*git push*| - send your local version of repository to remote repository. **Note**, it requires initial authorization in remote repository
