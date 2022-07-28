@@ -81,9 +81,9 @@ The list of most common commands for checking the status of work, the history of
 >**Note:** If a list of information to display in Terminal after entering the command **git log** is extensive, Terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
 >>Beware of keyboard language layout. If it is not **English**, pressing **q** won't work.
 
-![cursor](cursor.jpg) - cursor 
+![cursor](/images/cursor.jpg) - cursor 
 
-![END](end.jpg) - end
+![END](/images/end.jpg) - end
 <p> </p>
 
 ## Save changes to project
@@ -92,7 +92,7 @@ The general rule for saving changes to your project to Git repository are as fol
 1. After you have made some changes to the files in your project and you are happy with what you have done, save the files same way as how you would usually do. I.e. press hotkey *Ctrl+s* on your keyboard or go to *File/Save*.
    >Note: if you don't save your files, the changes will not be saved into next commit. If you don't rememeber whether you saved files, look through all opened tabs - any unsaved file tabs will have white dot on the right, like this:
 
-   ![white dot](white_dot.jpg)
+   ![white dot](/images/white_dot.jpg)
 
 2. Stage files for the next commit. I.e. add them to the queque for saving into Git repository. To do that you need to use Add commands. There are several versions of such commands. They are listed below. Failng to do this step also will not save the changes to the next commit.
 
@@ -123,7 +123,7 @@ There might be occastions when you will want to move to one of your previous com
 ## Branches - create, delete, merge, move between
 Branch is a feature which allows you to work on different areas of project independently. For instance, you might want to continue main work on the project while at the same time develop a feature of the project which, if succeeds, will be merged with main project in future.
 
-![Branches](branches.jpg)
+![Branches](/images/branches.jpg)
 
 Here are the commmands that can be used for branches:
 |Command| Desciption|
