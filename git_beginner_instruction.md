@@ -139,3 +139,12 @@ Here are the commmands that can be used for branches:
 |Command| Desciption|
 |----------|-----------|
 |git merge < branch name >| - Merge a branch in which you currently reside with a branch you specify. I.e. merge to be done from a branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type "git merge branch b"
+>**Note:** After branch "a" is merged with data from branch "b", branch "a" contains data of "a" and "b" (unless manually edited during conflict resolution), but branch "b" does not disappear. It still exists after merging in the same state as it was before merging. If branch "b" is not needed after merge, it needs to be deleted manually using command "git branch -d < branch name >*.
+
+### Merge conflicts
+If information was modified in the same files in both branches, Git will try to resolve the conflict by itself. However, it might fail to do that automatically, in which case Git will suggest you to resolve the conflict manually, as in the picture below:
+![Merge Conflict](/images/merge_conflict.jpg)
+
+You can either accept the changes in your current branch or accept the changes in incoming branch or accepth both changes.
+
+Once the conflict is resolved either perform command *git merge --continue* or command *git commit -am < message >*. 
