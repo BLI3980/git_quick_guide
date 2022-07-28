@@ -1,0 +1,1 @@
+This is a repository with a quick guide to start working on Git.
