@@ -107,9 +107,10 @@ The general rule for saving changes to your project to Git repository are as fol
 
    |Command| Desciption|
    |----------|-----------|
-   |*git commit -m "< message >"*| - Commit the staged files into Git repository. Type your message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
-   |*git commit -am "< message >"*| - This command combines Add and Commit commands into one. 
-   >*Note:* While the second type of commit command saves you time in most of occasions, note that it will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
+   |*git commit -m < message >*| - Commit the staged files into Git repository. Type your message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
+   |*git commit -am < message >*| - This command combines Add and Commit commands into one. 
+   |*git commit -m < message > < file >*| - This command will add and commit only specified file
+   >*Note:* While the second and the third types of commit command save you time in most of occasions, note that they will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
 
 ### __Why saving in three steps? Why do we need to *Add* for staging?__
 
