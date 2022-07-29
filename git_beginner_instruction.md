@@ -110,14 +110,32 @@ The general rule for saving changes to your project to Git repository are as fol
    |*git commit -m "< message >"*| - Commit the staged files into Git repository. Type your message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
    |*git commit -am "< message >"*| - This command combines Add and Commit commands into one. 
    >*Note:* While the second type of commit command saves you time in most of occasions, note that it will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
+
+### __Why saving in three steps? Why do we need to *Add* for staging?__
+
+The principle of **good** commmits is that they should not be too complex, but should be logically complete, i.e. to contain a work done on one aspect of a project, they should be clear to other team members of the project; it should be possible to move them around and remove. This principle of doing commits is call **atomic**.
+
+Throughout the project it often happens that when a work on one aspect of the project is not complete yet, a need to perform a work on the other part of the project arises. And when all completed, if we commit all changes made to those two (or more) parts of the project into one commit we break the atomic rule. That's why we need the ability to choose which changed files we include into staging (*add*) for the next commit and which to keep unstaged for now in order to include them later on for future commits.
 <p> </p>
 
+### __Advanced *add* function__
+
+It often happens that in one file there may be some changes made for one taks of the project and also changes for the other task. If we have completed the first task and ready to commit it, but not finshed the second task and do not want to commit anything related to it, we can even choose which changes in that file we can to *add* to commit and which to leave off for now. Use this command for such cases:
+   |Command| Desciption|
+   |----------|-----------|
+   |*git add -p < file >*| - Add only changes you want in the specified file. Once you enter this command you will be prompted what to do with certain hunk of the file. It will ask you "Stage this hunk [y, n, q, a, d, j, J, /, e, ?]. Type "?" if you are unsure.
+
+<p> </p>
+
+## Move commits around
 There might be occastions when you will want to move to one of your previous commits and from there to come back to the latest commit. To do that you need to type the following command:
 
    |Command| Desciption|
    |----------|-----------|
    |*git checkout "< commit hash >"*| - Move to another commit. Specifying the first 4-6 symbols of commit is generally sufficient, no need to type fill number
    |*git checkout master*| - Go back to the most recent commit
+
+>>>**THIS SECTION IS EXTENSIVE AND NOT COMPLETE YET. BESIDES *checkout*, IT CONTAINS SEVERAL POWERFULL COMMANDS, SUCH AS *rebase*, *cherry-pick* AND OTHERS. THE SECTION TO BE UPDATED IN FUTURE**
 <p> </p>
 
 ## Undo last action
@@ -159,7 +177,7 @@ You can either accept the changes in your current branch or accept the changes i
 Once the conflict is resolved either perform command *git merge --continue* or command *git commit -am < message >*. 
 <p> </p>
 
-# Working with remove repositories
+# Working with remote repositories
 
 ## Steps for *push* and *pull* commands to send and receive repositories from remote location:
 
