@@ -120,6 +120,15 @@ There might be occastions when you will want to move to one of your previous com
    |*git checkout master*| - Go back to the most recent commit
 <p> </p>
 
+## Undo last action
+
+Example. If you executed *git add .* command and then realized that in the directory there were some new files which shouldn't have been staged for commmit, then you can use the following command:
+   |Command| Desciption|
+   |----------|-----------|
+   |*git reset HEAD < file >*| - Removes a file, that have just been added to stage, from the staging
+>**Note:** *reset* command is quite powerfull command. The details of *reset* command will follow in this quick guide in future updates.
+<p> </p>
+
 ## Branches - create, delete, merge, move between
 Branch is a feature which allows you to work on different areas of project independently. For instance, you might want to continue main work on the project while at the same time develop a feature of the project which, if succeeds, will be merged with main project in future.
 
