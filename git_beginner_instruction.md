@@ -84,6 +84,21 @@ The list of most common commands for checking the status of work, the history of
 ![cursor](/images/cursor.jpg) - cursor 
 
 ![END](/images/end.jpg) - end
+
+The list of commands for viewing your current repository location and for navigating between repositories is as follows:
+
+|Command| Desciption|
+|-------------|-----------|
+|*pwd*| - to view full path to current repository
+|*ls*| - to view the list of files in current repository
+|*ls -a*| - to view the list of files in current repository, including hidden files
+|*ls < path to repository >*| - to view the list of files in repository to which you put the path relative to your current repository
+|*cd*| - to move to the home directory
+|*cd /*| - to move to root directory
+|*cd ..*| - to move one level up
+|*cd ../..*| - to move two levels up
+|*cd --*| - to move to previous directory
+|*cd /path/to/project*| - to move to the directory you want
 <p> </p>
 
 ## Save changes to project
@@ -110,6 +125,8 @@ The general rule for saving changes to your project to Git repository are as fol
    |*git commit -m < message >*| - Commit the staged files into Git repository. Type your message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
    |*git commit -am < message >*| - This command combines Add and Commit commands into one. 
    |*git commit -m < message > < file >*| - This command will add and commit only specified file
+   |*git commit --ammend*| - to correct a message in the last commit, if mistaks was made
+
    >*Note:* While the second and the third types of commit command save you time in most of occasions, note that they will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
 
 ### __Why saving in three steps? Why do we need to *Add* for staging?__
