@@ -178,6 +178,15 @@ You can either accept the changes in your current branch or accept the changes i
 Once the conflict is resolved either perform command *git merge --continue* or command *git commit -am < message >*. 
 <p> </p>
 
+## Rebase commits or branches
+
+*Rebase command* is similar to *Merge*. In some situations the result is the same as with merge. However, in some the result is different. Essentially *rebase* takes a commit or set of selected commits and puts them to another commit of your choice this way making it as if all these commits were made sequentially whereas they were created in parallel.
+
+ |Command| Desciption|
+|----------|-----------|
+|*git rebase < commit >*| - As opposed to merge command rebase relocates the commit in which we are currently checked out to a commit which we specify at the end of the command
+
+
 # Working with remote repositories
 
 There are many services available which offer remote repository functions to your version control system. 
