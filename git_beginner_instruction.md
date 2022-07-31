@@ -221,6 +221,7 @@ There several ways to create a remote repository and sync your work to and from 
  - *git remote add origin < url address>*
  - *git branch -M main*
  - *git push -u origin main*
+ 
  The meaning of these commands is explained in the table at the end of this section
 
 4. For future, also use (*push*) command to send your local repository to remote (GitHub). You might need to authorize on remote repository, depending on whether you did that before or not.
@@ -252,3 +253,4 @@ There several ways to create a remote repository and sync your work to and from 
 |*git remote add origin < url address>*| - adds new remote location to your local repository
 |*git branch -M main*| - rename the main branch of the repository from *"master"* (default) to *"main"* (new convention)
 |*git push -u origin main*| - send local repository version to the new location (*origin*)
+|*git remote -v*| - to view remote locations with which your project works. Fetch for pull/receive, pull for sending.
