@@ -29,7 +29,7 @@ Once Git and VSC are installed, create a folder on your PC or remote location wh
 
 ![Open Folder](images/create_new_file_and_folder.jpg) 
 
->**Note:** Avoid using cyrilic letters in the path name to your folder
+>**Note:** Avoid using cyrillic letters in the path name to your folder
 <p> </p>
 
 ## Initialize
@@ -44,7 +44,24 @@ At some point after creation of repository the program will ask you to introduce
 Commands that and information that you will need to provide is as follows:
 - *git config --global user.name < name >*
 - *git config --global user.email < email address >*
+<p> </p>
 
+## Basic commands and navigation
+
+The list of commands for viewing your current repository location and for navigating between repositories is as follows:
+
+|Command| Description|
+|-------------|-----------|
+|*pwd*| - to view full path to current repository
+|*ls*| - to view the list of files in current repository
+|*ls -a*| - to view the list of files in current repository, including hidden files
+|*ls < path to repository >*| - to view the list of files in repository to which you put the path relative to your current repository
+|*cd ~*| - to move to the home directory (C:\users\userName)
+|*cd /*| - to move to root directory
+|*cd ..*| - to move one level up
+|*cd ../..*| - to move two levels up
+|*cd --*| - to move to previous directory
+|*cd /path/to/project*| - to move to the directory you want
 <p> </p>
 
 # Begin to work
@@ -60,16 +77,16 @@ To create a new file in repository just click on the first icon in Explorer or c
 Use this command before and after any changes you make to Git (add, commit, checkout, etc).
 When type *git status* command pay attention to the following information that might be displayed in Terminal:
 
-|Status of work| Desciption|
+|Status of work| Description|
 |----------|-----------|
 |*Untracked, new file, modified*| - statuses of files that are due for commit
 |*Changes not staged for commit*| - status of changes that are not ready yet for commit
-|*Changes to be commited*| - status of changes that are ready for commit, have been staged
+|*Changes to be committed*| - status of changes that are ready for commit, have been staged
 <p> </p>
 
 The list of most common commands for checking the status of work, the history of commits, etc. are as follows:
 
-|Command| Desciption|
+|Command| Description|
 |-------------|-----------|
 |*git status*| - shows which branch you are on and whether there are any changes to project that are due for saving/commit
 |*git log*| - shows the list of commits created (if any) previously
@@ -78,91 +95,76 @@ The list of most common commands for checking the status of work, the history of
 |*git diff ##*| - checking the differences between the last two commits
 |git diff < commit "a" hash > < commit "b" hash >| - checking the differences between selected two commits
 
->**Note:** If a list of information to display in Terminal after entering the command **git log** is extensive, Terminal might show just sigle cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
+>**Note:** If a list of information to display in Terminal after entering the command **git log** is extensive, Terminal might show just single cursor or the word **END** on the bottom most line. Just press letter **q** on the keyboard to exit to normal view. 
 >>Beware of keyboard language layout. If it is not **English**, pressing **q** won't work.
 
 ![cursor](/images/cursor.jpg) - cursor 
 
 ![END](/images/end.jpg) - end
-
-The list of commands for viewing your current repository location and for navigating between repositories is as follows:
-
-|Command| Desciption|
-|-------------|-----------|
-|*pwd*| - to view full path to current repository
-|*ls*| - to view the list of files in current repository
-|*ls -a*| - to view the list of files in current repository, including hidden files
-|*ls < path to repository >*| - to view the list of files in repository to which you put the path relative to your current repository
-|*cd*| - to move to the home directory
-|*cd /*| - to move to root directory
-|*cd ..*| - to move one level up
-|*cd ../..*| - to move two levels up
-|*cd --*| - to move to previous directory
-|*cd /path/to/project*| - to move to the directory you want
 <p> </p>
 
 ## Save changes to project
 
 The general rule for saving changes to your project to Git repository are as follows:
 1. After you have made some changes to the files in your project and you are happy with what you have done, save the files same way as how you would usually do. I.e. press hotkey *Ctrl+s* on your keyboard or go to *File/Save*.
-   >Note: if you don't save your files, the changes will not be saved into next commit. If you don't rememeber whether you saved files, look through all opened tabs - any unsaved file tabs will have white dot on the right, like this:
+   >Note: if you don't save your files, the changes will not be saved into next commit. If you don't remember whether you saved files, look through all opened tabs - any unsaved file tabs will have white dot on the right, like this:
 
    ![white dot](/images/white_dot.jpg)
 
-2. Stage files for the next commit. I.e. add them to the queque for saving into Git repository. To do that you need to use Add commands. There are several versions of such commands. They are listed below. Failng to do this step also will not save the changes to the next commit.
+2. Stage files for the next commit. I.e. add them to the queue for saving into Git repository. To do that you need to use Add commands. There are several versions of such commands. They are listed below. Failing to do this step also will not save the changes to the next commit.
 
-   |Command| Desciption|
+   |Command| Description|
    |----------|-----------|
    |*git add < file name >*| - Add a file which you want to stage, so that all changes made to this file are ready to be written into next commit. To speed up typing this command, after you typed a few letters of the file name, press Tab and Git will autocomplete the file name. Check if Git suggestion was correct, otherwise correct as you need manually.
    |*git add .*| - Add all files in the branch to stage. Do this if you do not have any exclusions, i.e. want to stage all files in the branch.
 
-   Add and Commit commands can be combined into one command for some occasions. This will be explained futher down below in this help file.
+   Add and Commit commands can be combined into one command for some occasions. This will be explained further down below in this help file.
 
 3. Perform commit, i.e. save changes which you want to save into Git repository. This can be done with the following commands:
 
-   |Command| Desciption|
+   |Command| Description|
    |----------|-----------|
    |*git commit -m < message >*| - Commit the staged files into Git repository. Type your message to distinguish this commit from others, so that you will know what was saved in it, if you will decide to go back to this commit in future.
    |*git commit -am < message >*| - This command combines Add and Commit commands into one. 
    |*git commit -m < message > < file >*| - This command will add and commit only specified file
-   |*git commit --ammend*| - to correct a message in the last commit, if mistaks was made
+   |*git commit --amend*| - to correct a message in the last commit, if a mistake was made
 
    >*Note:* While the second and the third types of commit command save you time in most of occasions, note that they will not work if you have created or copied into the repository new files. In such case, you have to do Add and Commit in separate commands.
 
 ### __Why saving in three steps? Why do we need to *Add* for staging?__
 
-The principle of **good** commmits is that they should not be too complex, but should be logically complete, i.e. to contain a work done on one aspect of a project, they should be clear to other team members of the project; it should be possible to move them around and remove. This principle of doing commits is call **atomic**.
+The principle of **good** commits is that they should not be too complex, but should be logically complete, i.e. to contain a work done on one aspect of a project, they should be clear to other team members of the project; it should be possible to move them around and remove. This principle of doing commits is call **atomic**.
 
 Throughout the project it often happens that when a work on one aspect of the project is not complete yet, a need to perform a work on the other part of the project arises. And when all completed, if we commit all changes made to those two (or more) parts of the project into one commit we break the atomic rule. That's why we need the ability to choose which changed files we include into staging (*add*) for the next commit and which to keep unstaged for now in order to include them later on for future commits.
 <p> </p>
 
 ### __Advanced *add* function for single file__
 
-It often happens that in one file there may be some changes made for one taks of the project and also changes for the other task. If we have completed the first task and ready to commit it, but not finshed the second task and do not want to commit anything related to it, we can even choose which changes in that file we can to *add* to commit and which to leave off for now. Use this command for such cases:
-   |Command| Desciption|
+It often happens that in one file there may be some changes made for one tasks of the project and also changes for the other task. If we have completed the first task and ready to commit it, but not finished the second task and do not want to commit anything related to it, we can even choose which changes in that file we can to *add* to commit and which to leave off for now. Use this command for such cases:
+   |Command| Description|
    |----------|-----------|
    |*git add -p < file >*| - Add only changes you want in the specified file. Once you enter this command you will be prompted what to do with certain hunk of the file. It will ask you "Stage this hunk [y, n, q, a, d, j, J, /, e, ?]. Type "?" if you are unsure.
 
 <p> </p>
 
 ## Move commits around
-There might be occastions when you will want to move to one of your previous commits and from there to come back to the latest commit. To do that you need to type the following command:
+There might be occasions when you will want to move to one of your previous commits and from there to come back to the latest commit. To do that you need to type the following command:
 
-   |Command| Desciption|
+   |Command| Description|
    |----------|-----------|
    |*git checkout "< commit hash >"*| - Move to another commit. Specifying the first 4-6 symbols of commit is generally sufficient, no need to type fill number
    |*git checkout master*| - Go back to the most recent commit
 
->>>**THIS SECTION IS EXTENSIVE AND NOT COMPLETE YET. BESIDES *checkout*, IT CONTAINS SEVERAL POWERFULL COMMANDS, SUCH AS *rebase*, *cherry-pick* AND OTHERS. THE SECTION TO BE UPDATED IN FUTURE**
+>>>**THIS SECTION IS EXTENSIVE AND NOT COMPLETE YET. BESIDES *checkout*, IT CONTAINS SEVERAL POWERFUL COMMANDS, SUCH AS *rebase*, *cherry-pick* AND OTHERS. THE SECTION TO BE UPDATED IN FUTURE**
 <p> </p>
 
 ## Undo last action
 
-Example. If you executed *git add .* command and then realized that in the directory there were some new files which shouldn't have been staged for commmit, then you can use the following command:
-   |Command| Desciption|
+Example. If you executed *git add .* command and then realized that in the directory there were some new files which shouldn't have been staged for commit, then you can use the following command:
+   |Command| Description|
    |----------|-----------|
    |*git reset HEAD < file >*| - Removes a file, that have just been added to stage, from the staging
->**Note:** *reset* command is quite powerfull command. The details of *reset* command will follow in this quick guide in future updates.
+>**Note:** *reset* command is quite powerful command. The details of *reset* command will follow in this quick guide in future updates.
 <p> </p>
 
 ## Branches - create, delete, merge, move between
@@ -170,18 +172,18 @@ Branch is a feature which allows you to work on different areas of project indep
 
 ![Branches](/images/branches.jpg)
 
-Here are the commmands that can be used for branches:
-|Command| Desciption|
+Here are the commands that can be used for branches:
+|Command| Description|
 |----------|-----------|
 |*git branch*| - Displays the list of currently existing branches. And also highlights the branch in which you currently reside with green color and a star symbol
 |*git branch < branch name >*| - Create new branch with < branch name >
-|*git branch -d < branch name >*| - Delete an existing branch. Use small -d perferably. This way deleting will be performed only if all work in the branch is already merged with another branch
+|*git branch -d < branch name >*| - Delete an existing branch. Use small -d preferably. This way deleting will be performed only if all work in the branch is already merged with another branch
 |*git checkout < branch or commit hash >*| - Move to the specified branch
 |*git checkout -b < branch name >*| - Create new branch and move to it, in one command
 
 
 ## Merge branches
-|Command| Desciption|
+|Command| Description|
 |----------|-----------|
 |*git merge < branch name >*| - Merge a branch in which you currently reside with a branch you specify. I.e. merge to be done from a branch *into* which merge will be done. For instance, if you want merged information to be in branch "a", then make sure you are in this branch and then type "git merge branch b"
 >**Note:** After branch "a" is merged with data from branch "b", branch "a" contains data of "a" and "b" (unless manually edited during conflict resolution), but branch "b" does not disappear. It still exists after merging in the same state as it was before merging. If branch "b" is not needed after merge, it needs to be deleted manually using command "git branch -d < branch name >*.
@@ -190,7 +192,7 @@ Here are the commmands that can be used for branches:
 If information was modified in the same files in both branches, Git will try to resolve the conflict by itself. However, it might fail to do that automatically, in which case Git will suggest you to resolve the conflict manually, as in the picture below:
 ![Merge Conflict](/images/merge_conflict.jpg)
 
-You can either accept the changes in your current branch or accept the changes in incoming branch or accepth both changes.
+You can either accept the changes in your current branch or accept the changes in incoming branch or accept both changes.
 
 Once the conflict is resolved either perform command *git merge --continue* or command *git commit -am < message >*. 
 <p> </p>
@@ -199,10 +201,10 @@ Once the conflict is resolved either perform command *git merge --continue* or c
 
 *Rebase command* is similar to *Merge*. In some situations the result is the same as with merge. However, in some the result is different. Essentially *rebase* takes a commit or set of selected commits and puts them to another commit of your choice this way making it as if all these commits were made sequentially whereas they were created in parallel.
 
- |Command| Desciption|
+ |Command| Description|
 |----------|-----------|
 |*git rebase < commit >*| - As opposed to merge command rebase relocates the commit in which we are currently checked out to a commit which we specify at the end of the command
-
+<p> </p>
 
 # Working with remote repositories
 
@@ -234,7 +236,7 @@ There several ways to create a remote repository and sync your work to and from 
 
 2. Create local repository
 
-3. Authorize local repository on GitHub. Git will ask to login on GitHub. Perform the folloing commands for that:
+3. Authorize local repository on GitHub. Git will ask to login on GitHub. Perform the following commands for that:
  - *git remote add origin < url address>*
  - *git branch -M main*
  - *git push -u origin main*
@@ -245,7 +247,7 @@ There several ways to create a remote repository and sync your work to and from 
 
 5. You can make changes to your project from another computer or directly on GitHub.Someone else who has access to your remote repository can also make changes to it and ask for your permission to accept those changes
 
-6. In order to sync your local repository with remote, download (*pull*) the most recent verion of repository from remote location to your local location
+6. In order to sync your local repository with remote, download (*pull*) the most recent version of repository from remote location to your local location
 <p> </p>
 
 ## Steps of how to perform changes on open-source projects published on Github:
@@ -262,7 +264,7 @@ There several ways to create a remote repository and sync your work to and from 
 
 6. On Github a button *Compare & Pull Request* will appear suggesting to send our changes to the Author of the project. The Author will review and decide if he wants to accept the changes, then to merge to his project if he accepts.
 
-|Command| Desciption|
+|Command| Description|
 |----------|-----------|
 |*git clone < url address >*| - copies remote repository to your local location. **Note**, this command not only loads repository to your local location, but also tries to merge remote repository with yours.
 |*git pull*| - loads all from current remote repository to local repository and merge changes
